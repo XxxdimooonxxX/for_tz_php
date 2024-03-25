@@ -8,6 +8,8 @@ use yii\rest\Controller;
 use app\models\RandNumbers; // Используем из пространства модель для работы с таблицей рандомных чисел 
 use yii\web\Response;       // Для изменения типа ответа
 
+// use yii\web\Request;
+
 /**
  * Контроллер для работы с рандомными числами
 */
@@ -61,5 +63,21 @@ class NumbersCookieController extends Controller
 
         // Возвращаем результат в формате JSON
         return ['id' => $id, 'number' => $randomNumber];
+    }
+
+    /**
+     * Возврат всех данных из cookies
+     * @return array 
+    */
+    public function actionAll()
+    {
+        //! Закомментировать строчку, если нужно в формате XML
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        // получаем все данные
+        $data = Yii::$app->request->cookies;
+
+        // Возвращаем результат
+        return $data;
     }
 }

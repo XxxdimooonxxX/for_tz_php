@@ -53,4 +53,20 @@ class NumbersController extends Controller
         // Возвращаем результат
         return ['id' => $model->id, 'number' => $model->number];
     }
+
+    /**
+     * Возврат всех данных из таблицы
+     * @return array 
+    */
+    public function actionAll()
+    {
+        //! Закомментировать строчку, если нужно в формате XML
+        Yii::$app->response->format = Response::FORMAT_JSON;
+
+        // получаем все данные
+        $data = RandNumbers::find()->all(); 
+
+        // Возвращаем результат
+        return $data;
+    }
 }

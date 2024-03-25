@@ -6,7 +6,19 @@ $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
+<h3>Через БД</h3>
+<p>generate и сохранение в БД - <a href="/numbers/generate/">/numbers/generate/</a></p>
+<p>retrieve - <a href="/numbers/retrieve?id=1">/numbers/retrieve?id=1</a></p>
+<p><b>Для теста и удобства:</b></p>
+<p>Все данные из таблицы - <a href="/numbers/all/">/numbers/all/</a></p>
+
+<h3>Через Cookie</h3>
+<p>generate и сохранение в Cookie - <a href="/numbers-cookie/generate/">/numbers-cookie/generate/</a></p>
+<p>retrieve - <a href="/numbers-cookie/retrieve?id=1">/numbers-cookie/retrieve?id=1</a></p>
+<p><b>Для теста и удобства:</b></p>
+<p>Все данные из Cookie - <a href="/numbers-cookie/all/">/numbers-cookie/all/</a></p>
+
+    <!-- <div class="jumbotron text-center bg-transparent mt-5 mb-5">
         <h1 class="display-4">Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
@@ -49,5 +61,5 @@ $this->title = 'My Yii Application';
             </div>
         </div>
 
-    </div>
+    </div> -->
 </div>
