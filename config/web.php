@@ -49,7 +49,7 @@ $config = [
             'rules' => [
                 [
                     'class' => 'yii\rest\UrlRule', 
-                    'controller' => ['numbers']
+                    'controller' => ['numbers', 'numbers-cookie']
                 ],
             ],
         ],
